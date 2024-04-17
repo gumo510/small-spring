@@ -1,5 +1,6 @@
 package cn.bugstack.springframework.beans.factory.support;
 
+import cn.bugstack.springframework.beans.BeansException;
 import cn.bugstack.springframework.core.io.DefaultResourceLoader;
 import cn.bugstack.springframework.core.io.ResourceLoader;
 
