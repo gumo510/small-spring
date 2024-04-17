@@ -5,4 +5,5 @@ package cn.bugstack.springframework.beans.factory;
  * of a hierarchy.
  */
 public interface HierarchicalBeanFactory extends BeanFactory {
+
 }
