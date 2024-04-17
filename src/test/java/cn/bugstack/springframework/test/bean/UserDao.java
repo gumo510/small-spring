@@ -1,9 +1,13 @@
 package cn.bugstack.springframework.test.bean;
 
+import cn.bugstack.springframework.beans.BeansException;
+import cn.bugstack.springframework.context.ApplicationContext;
+import cn.bugstack.springframework.context.ApplicationContextAware;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class UserDao {
+public class UserDao{
 
     private static Map<String, String> hashMap = new HashMap<>();
 
