@@ -1,13 +1,19 @@
-package cn.bugstack.springframework.test.bean;
+package cn.bugstack.springframework.test.bean2;
+
+import cn.bugstack.springframework.beans.factory.annotation.Autowired;
+import cn.bugstack.springframework.beans.factory.annotation.Value;
+import cn.bugstack.springframework.stereotype.Component;
 
 import java.util.Random;
 
-/**
- * 作者：DerekYRC https://github.com/DerekYRC/mini-spring
- */
+@Component
 public class UserService implements IUserService {
 
+    @Value("${token}")
     private String token;
+
+    @Autowired
+    private UserDao userDao;
 
     public String queryUserInfo() {
         try {
@@ -15,7 +21,7 @@ public class UserService implements IUserService {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return "小傅哥，100001，深圳，" + token;
+        return userDao.queryUserName("10001") + token;
     }
 
     public String register(String userName) {
