@@ -90,8 +90,6 @@ public class AutowiredAnnotationBeanPostProcessor implements InstantiationAwareB
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        // Bug: 返回null会影响代理对象的创建
-        // return null;
-        return bean;
+        return null;
     }
 }
